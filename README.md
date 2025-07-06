@@ -124,7 +124,55 @@ ORDER BY
   END;
 ```
 
-![alt text](img/image-4.png) 5. Bagaimana segmentasi pelanggan berdasarkan usia?
+4.1  -- Total order 2024 by month per year
+```sql
+SELECT `Month`, COUNT(`Month`) AS Total_order_month
+FROM new_retail_data
+WHERE `Year` = 2024
+GROUP BY `Month`
+ORDER BY 
+  CASE TRIM(`Month`)
+    WHEN 'January' THEN 1
+    WHEN 'February' THEN 2
+    WHEN 'March' THEN 3
+    WHEN 'April' THEN 4
+    WHEN 'May' THEN 5
+    WHEN 'June' THEN 6
+    WHEN 'July' THEN 7
+    WHEN 'August' THEN 8
+    WHEN 'September' THEN 9
+    WHEN 'October' THEN 10
+    WHEN 'November' THEN 11
+    WHEN 'December' THEN 12
+  END;
+```
+
+4.2  -- Total order 2023 by month per year
+
+```sql
+SELECT `Month`, COUNT(`Month`) AS Total_order_month
+FROM new_retail_data
+WHERE `Year` = 2023
+GROUP BY `Month`
+ORDER BY 
+  CASE TRIM(`Month`)
+    WHEN 'January' THEN 1
+    WHEN 'February' THEN 2
+    WHEN 'March' THEN 3
+    WHEN 'April' THEN 4
+    WHEN 'May' THEN 5
+    WHEN 'June' THEN 6
+    WHEN 'July' THEN 7
+    WHEN 'August' THEN 8
+    WHEN 'September' THEN 9
+    WHEN 'October' THEN 10
+    WHEN 'November' THEN 11
+    WHEN 'December' THEN 12
+  END;
+```
+
+![alt text](img/image-10.png) 
+5. Bagaimana segmentasi pelanggan berdasarkan usia?
 
 ```sql
 -- Customer segmentation by age
