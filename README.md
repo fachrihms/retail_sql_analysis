@@ -172,6 +172,7 @@ ORDER BY
 ```
 
 ![alt text](img/image-10.png) 
+
 5. Bagaimana segmentasi pelanggan berdasarkan usia?
 
 ```sql
